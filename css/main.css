@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Karla;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.containerPriceComponent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sect1"
+    "sect2"
+    "sect3";
+}
+
+.sect1 {
+    grid-area: sect1;
+    padding: 50px;
+    background-color: white;
+}
+.sect2 {
+    grid-area: sect2;
+    padding: 50px;
+    background-color: hsl(179, 62%, 43%);
+}
+.sect3 {
+    grid-area: sect3;
+    padding: 50px;
+    background-color: rgb(74, 190, 189);
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2em;
+    color: hsl(179, 62%, 43%);
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    font-size: 1.3em;
+    color: hsl(204, 43%, 93%);
+}
+
+.sect1 > h2 {
+    color: hsl(71, 73%, 54%);;
+}
+
+.sect1 > p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.6em;
+}
+
+.sect2Flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.sect2 div p:nth-child(1) {
+    font-size: 3em;
+}
+
+.sect2 div p:nth-child(1) {
+    font-size: 3em;
+    padding-right: 0.4em;
+}
+.sect2 div p:nth-child(2) {
+    color: hsla(203, 44%, 93%, 0.623);
+}
+
+.sect2 div p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.sect3 > p {
+    font-size: 1em;
+    margin: 0em 0em 0.5em 0em;
+}
+
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    width: 100%;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 1px 4px 15px -9px rgba(46,46,46,1);
+}
+
+button > a {
+    text-decoration: none;
+}
+
+button > a > p {
+    font-size: 1.5em;
+    margin: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+/*Desktop Responsive*/
+@media only screen and (min-width: 1200px) {
+    .containerPriceComponent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "sect1 sect1"
+        "sect2 sect3";
+        border-radius: 10%;
+    }
+    .sect1 > p {
+        max-width: 40rem;
+    }
+    .marginBuffer {
+        margin: 20vh 25vw;;
+    }
+  }
